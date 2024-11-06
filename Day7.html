@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confirmation Animation</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    position: relative;
+    text-align: center;
+  }
+
+  .icon {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+  }
+
+  .text {
+    margin-top: 20px;
+  }
+
+  .confirmed {
+    animation: confirmed 1s ease forwards;
+  }
+
+  @keyframes confirmed {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="icon">✓</div>
+  <div class="text">Order Confirmed!</div>
+</div>
+<script>
+  // Add the "confirmed" class to trigger the animation
+  document.querySelector('.container').classList.add('confirmed');
+</script>
+</body>
+</html>

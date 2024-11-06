@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Menu Icons</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f1f1f1;
+    }
+
+    .menu-icon {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .menu-icon span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin-bottom: 5px;
+        background-color: #333;
+        transition: transform 0.3s ease;
+    }
+
+    .menu-icon span:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu-icon.open span:first-child {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .menu-icon.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-icon.open span:last-child {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+</style>
+</head>
+<body>
+
+<div class="menu-icon" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<script>
+    function toggleMenu() {
+        const menuIcon = document.querySelector('.menu-icon');
+        menuIcon.classList.toggle('open');
+    }
+</script>
+
+</body>
+</html>
