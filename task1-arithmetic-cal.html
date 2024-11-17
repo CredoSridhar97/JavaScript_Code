@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Calculation</title>
+</head>
+<style>
+    body {
+        background-color: aquamarine;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    .userData {
+        background-color: bisque;
+        width: 565px;
+        border: 1px solid red;
+        margin: 20px;
+        padding: 30px;
+        position: absolute;
+        left: 30%;
+        top: 23%;
+    }
+
+    .btn-div {
+        position: absolute;
+        left: 30%;
+        top: 53%;
+    }
+
+    button {
+        background-color: #1a5ca7;
+        color: #fff;
+        width: 110px;
+        height: 40px;
+        font-weight: bold;
+        cursor: pointer;
+        border:none;
+    }
+
+    #result {
+        padding: 20px;
+        font-size: xx-large;
+        color: #150734;
+    }
+</style>
+
+<body>
+
+    <h1>Arithmetic Calculation</h1>
+
+    <div class="userData">
+        <label style="padding-right: 40px;">Enter First Number :</label>
+        <input type="text" name="fno" id="fno"></br><br>
+        <label style="padding-right: 23px;">Enter Second Number :</label>
+        <input type="text" name="sno" id="sno"></br>
+    </div>
+
+
+    <div class="btn-div">
+        <button onclick="add()">ADD</button>
+        <button onclick="sub()">SUBTRACT</button>
+        <button onclick="mul()">MULTIPLY</button>
+        <button onclick="div()">DIVIDE</button>
+        <button onclick="mod()">MODULUS</button>
+        <button onclick="expo()">EXPONENTION</button>
+        <div id="result">The Value is : </div>
+    </div>
+
+
+
+
+    <script>
+        function add() {
+            let firstNumber = document.getElementById('fno').value;
+            let secondNumber = document.getElementById('sno').value;
+            let result = parseInt(firstNumber) + parseInt(secondNumber);
+
+            document.getElementById('result').innerHTML = "The Value is : " + result;
+        }
+
+        function sub() {
+            let firstNumber = document.getElementById('fno').value;
+            let secondNumber = document.getElementById('sno').value;
+            let result = parseInt(firstNumber) - parseInt(secondNumber);
+
+            document.getElementById('result').innerHTML = "The Value is : " + result;
+        }
+
+        function mul() {
+            let firstNumber = document.getElementById('fno').value;
+            let secondNumber = document.getElementById('sno').value;
+            let result = parseInt(firstNumber) * parseInt(secondNumber);
+
+            document.getElementById('result').innerHTML = "The Value is : " + result;
+        }
+
+        function div() {
+            let firstNumber = document.getElementById('fno').value;
+            let secondNumber = document.getElementById('sno').value;
+            let result = parseInt(firstNumber) / parseInt(secondNumber);
+
+            document.getElementById('result').innerHTML = "The Value is : " + result;
+        }
+
+        function mod() {
+            let firstNumber = document.getElementById('fno').value;
+            let secondNumber = document.getElementById('sno').value;
+            let result = parseInt(firstNumber) % parseInt(secondNumber);
+
+            document.getElementById('result').innerHTML = "The Value is : " + result;
+        }
+
+        function expo() {
+            let firstNumber = document.getElementById('fno').value;
+            let secondNumber = document.getElementById('sno').value;
+            let result = parseInt(firstNumber) ** parseInt(secondNumber);
+
+            document.getElementById('result').innerHTML = "The Value is : " + result;
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
